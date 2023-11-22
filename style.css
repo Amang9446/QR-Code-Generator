@@ -106,6 +106,10 @@ textarea {
   padding: 0;
   transition: background-color 0.3s;
 }
+.button-container {
+  display: flex;
+  gap: 10px; 
+}
 
 select,option {
   background-image: none;
