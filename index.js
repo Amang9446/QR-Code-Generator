@@ -29,5 +29,20 @@ function genQR() {
     else {
         alert("Please Enter Text");
     }
+    
+    var gridElement = document.querySelector(".grid");
+
+    html2pdf(gridElement, {
+        margin: 10, // Adjust margins as needed
+        filename: 'qrcode.pdf',
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    }).then(function(pdf) {
+        pdf.output("blob").then(function(blob) {
+            var link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "qrcode.pdf";
+            link.click();
+        });
+    });
 
 }

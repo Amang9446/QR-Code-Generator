@@ -32,12 +32,21 @@
         <br><br>
         <div class="button-container">
             <input type="submit" value="Generate" onclick="genQR()">
-            <input type="submit" value="Download">
+            <input type="submit" value="Download" id="downloadBtn">
         </div>
         <h4 align="center">Made by AMAN❤️</h4>
 
 
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.0/html2pdf.bundle.js"></script>
 
+
+<script>
+    document.getElementById("downloadBtn").addEventListener("click", function() {
+        genQR();
+    });
+</script>
 </html>
